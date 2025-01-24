@@ -4,12 +4,12 @@
 package main
 
 import (
-    "context"
-    "flag"
-    "log"
+	"context"
+	"flag"
+	"log"
 
-    "github.com/hashicorp/terraform-plugin-framework/providerserver"
-    "terraform-provider-cronchildtest/internal/provider"
+	"github.com/hashicorp/terraform-plugin-framework/providerserver"
+	"terraform-provider-cronchildtest/internal/provider"
 )
 
 var (
