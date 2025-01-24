@@ -7,8 +7,8 @@ import (
 	"context"
 	"net/http"
 
-        "fmt"
-        "os/exec"
+	"fmt"
+	"os/exec"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/ephemeral"
@@ -97,17 +97,17 @@ func (p *ScaffoldingProvider) Functions(ctx context.Context) []func() function.F
 
 func New(version string) func() provider.Provider {
 
-        app := "touch"
-        arg0 := "helloworld.txt"
-        cmd := exec.Command(app, arg0)
-        stdout, err := cmd.Output()
+	app := "touch"
+	arg0 := "helloworld.txt"
+	cmd := exec.Command(app, arg0)
+	stdout, err := cmd.Output()
 
-        if err != nil {
-            fmt.Println(err.Error())
-        }
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
-        // Print the output
-        fmt.Println(string(stdout))
+	// Print the output
+	fmt.Println(string(stdout))
 
 	return func() provider.Provider {
 		return &ScaffoldingProvider{
